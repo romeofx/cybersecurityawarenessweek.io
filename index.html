@@ -392,11 +392,43 @@ form#registrationForm button:hover {
 <script>
 document.getElementById('registrationForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  document.getElementById('responseMessage').textContent = "Thank you! Your registration has been submitted.";
-  this.reset();
+  const form = e.target;
+
+  const data = {
+    fullname: form.fullname.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    gender: form.gender.value,
+    age: form.age.value,
+    role: form.role.value,
+    organization: form.organization.value,
+    training: form.training.value,
+    concern: form.concern.value,
+    linkSafety: form.linkSafety.value,
+    scamVictim: form.scamVictim.value,
+    source: form.source.value,
+    consent: form.consent.value
+  };
+
+  fetch('https://script.google.com/macros/s/AKfycbzIDNvGP34_6OHhnUjtSJjpi_JpKS5INHHFHroba-z0kUKl8NxSM4Fd2qaN3jigPMSO/exec', {
+    method: 'POST',
+    body: JSON.stringify(data),
+  })
+  .then(response => response.json())
+  .then(result => {
+    if(result.status === 'success'){
+      document.getElementById('responseMessage').textContent = "Thank you! Your registration has been submitted.";
+      form.reset();
+    }
+  })
+  .catch(err => {
+    document.getElementById('responseMessage').textContent = "Error submitting form. Try again.";
+    console.error(err);
+  });
 });
 </script>
 
 </body>
 </html>
+
 
