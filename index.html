@@ -221,12 +221,14 @@ footer {
     <input type="text" name="fullname" placeholder="Full Name" required>
     <input type="email" name="email" placeholder="Email Address" required>
     <input type="tel" name="phone" placeholder="Phone Number" required>
+
     <select name="gender" required>
       <option value="">Gender</option>
       <option>Male</option>
       <option>Female</option>
       <option>Prefer not to say</option>
     </select>
+
     <select name="age">
       <option value="">Age Range</option>
       <option>Under 15</option>
@@ -235,6 +237,7 @@ footer {
       <option>31–40</option>
       <option>41 and above</option>
     </select>
+
     <select name="role">
       <option value="">Are you a</option>
       <option>Student</option>
@@ -244,12 +247,15 @@ footer {
       <option>Entrepreneur</option>
       <option>Other</option>
     </select>
+
     <input type="text" name="organization" placeholder="School or Organization" required>
+
     <select name="training">
       <option value="">Cybersecurity training before</option>
       <option>Yes</option>
       <option>No</option>
     </select>
+
     <select name="concern">
       <option value="">Main online security concern</option>
       <option>Hacked social media accounts</option>
@@ -260,17 +266,20 @@ footer {
       <option>Business security</option>
       <option>Other</option>
     </select>
+
     <select name="linkSafety">
       <option value="">Check shortened link safety</option>
       <option>Yes</option>
       <option>No</option>
       <option>Not sure</option>
     </select>
+
     <select name="scamVictim">
       <option value="">Victim of online scam</option>
       <option>Yes</option>
       <option>No</option>
     </select>
+
     <select name="source">
       <option value="">How did you hear</option>
       <option>Facebook</option>
@@ -278,15 +287,103 @@ footer {
       <option>Friend</option>
       <option>Other</option>
     </select>
+
     <select name="consent" required>
       <option value="">Receive event updates</option>
       <option>Yes</option>
       <option>No</option>
     </select>
+
     <button type="submit">Submit Registration</button>
   </form>
   <p id="responseMessage"></p>
 </section>
+
+<style>
+/* Form Container */
+section.form-container {
+  max-width: 700px;
+  margin: 120px auto 50px auto;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.form-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.2);
+}
+
+section.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: #0073e6;
+  font-size: 2em;
+}
+
+/* Inputs and Selects */
+form#registrationForm input,
+form#registrationForm select {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  border: 1px solid #b8c6db;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+form#registrationForm input:focus,
+form#registrationForm select:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 8px rgba(0,115,230,0.4);
+  outline: none;
+}
+
+/* Button */
+form#registrationForm button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: linear-gradient(90deg, #0073e6, #00a1ff);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form#registrationForm button:hover {
+  background: linear-gradient(90deg, #005bb5, #0080d1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Response Message */
+#responseMessage {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #0073e6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  section.form-container {
+    margin: 100px 15px 50px 15px;
+    padding: 30px 20px;
+  }
+
+  form#registrationForm button {
+    padding: 14px;
+    font-size: 1em;
+  }
+}
+</style>
 
 <footer>
   <p>© 2026 Exelsor Projects Limited</p>
@@ -302,3 +399,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
 </body>
 </html>
+
