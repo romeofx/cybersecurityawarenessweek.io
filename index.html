@@ -7,14 +7,13 @@
 <title>Cybersecurity Awareness Week 2026</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="icon" href="assets/favicon.ico">
 
 <!-- CSS -->
 <style>
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -25,21 +24,6 @@
 body {
   background: #f4f6f8;
   color: #333;
-  line-height: 1.6;
-}
-
-/* Header */
-header.header {
-  position: relative;
-  text-align: center;
-  padding: 20px;
-  color: #fff;
-  z-index: 10;
-}
-
-header.header .logo {
-  width: 120px;
-  margin-bottom: 10px;
 }
 
 /* Hero Section */
@@ -52,7 +36,6 @@ section.hero {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 20px;
 }
 
 .hero-overlay {
@@ -73,7 +56,6 @@ section.hero {
 }
 
 .hero-content h1 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.8em;
   margin-bottom: 15px;
 }
@@ -81,25 +63,6 @@ section.hero {
 .hero-content p {
   font-size: 1.3em;
   margin-bottom: 20px;
-}
-
-/* CTA button inside form section only */
-section.form-container button {
-  background-color: #0073e6;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 8px;
-  padding: 12px;
-  width: 100%;
-  transition: 0.3s;
-}
-
-section.form-container button:hover {
-  background-color: #005bb5;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Animation */
@@ -111,7 +74,7 @@ section.form-container button:hover {
 /* Form Section */
 section.form-container {
   max-width: 650px;
-  margin: 50px auto 50px auto;
+  margin: 50px auto;
   padding: 25px;
   border-radius: 15px;
   background: #fff;
@@ -121,7 +84,6 @@ section.form-container {
 section.form-container h2 {
   text-align: center;
   margin-bottom: 25px;
-  font-family: 'Montserrat', sans-serif;
   color: #0073e6;
 }
 
@@ -144,13 +106,29 @@ form#registrationForm select:focus {
   box-shadow: 0 0 5px rgba(0,115,230,0.5);
 }
 
+form#registrationForm button {
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 8px;
+  padding: 12px;
+  transition: 0.3s;
+}
+
+form#registrationForm button:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 25px;
   background-color: #1a1a1a;
   color: #fff;
-  margin-top: 40px;
   font-size: 0.9em;
   opacity: 0.9;
 }
@@ -175,6 +153,7 @@ footer {
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
+    <!-- Keep header exactly as it is -->
     <header class="header">
       <img src="assets/logo.png" class="logo" alt="Cybersecurity Awareness Week Logo">
       <h1>Cybersecurity Awareness Week 2026</h1>
