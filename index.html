@@ -110,6 +110,17 @@ section.hero {
   margin-bottom: 20px;
 }
 
+.hero-content .about-link {
+  color: #ff9900;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.hero-content .about-link:hover {
+  color: #e68a00;
+}
+
 /* Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
@@ -167,30 +178,6 @@ form#registrationForm button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* About Section */
-section.about {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 40px 25px;
-  background: #0073e6;
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-section.about h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-}
-
-section.about p {
-  font-size: 1.1em;
-  line-height: 1.8;
-  text-align: justify;
-}
-
 /* Footer */
 footer {
   text-align: center;
@@ -222,8 +209,9 @@ footer {
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h1>Cybersecurity Awareness Week 2026</h1>
-    <h3>Organized by Exelsor projects Limited</h3>
+    <h2>Protect Your Digital Life</h2>
     <p>Join Cybersecurity Awareness Week. Limited seats available.</p>
+    <p>Learn more about <span class="about-link" onclick="window.location.href='about.html'">Exelsor Projects Ltd.</span></p>
   </div>
 </section>
 
@@ -300,15 +288,6 @@ footer {
   <p id="responseMessage"></p>
 </section>
 
-<section class="about">
-  <h2>About Exelsor Projects Ltd.</h2>
-  <p>
-    Exelsor Projects Limited is committed to promoting digital safety and cybersecurity awareness across Nigeria. 
-    We organize workshops, seminars, and awareness campaigns to educate individuals and businesses on best practices for protecting their online presence.
-    Our mission is to empower citizens with the knowledge and tools to stay safe in the digital world.
-  </p>
-</section>
-
 <footer>
   <p>© 2026 Exelsor Projects Limited</p>
 </footer>
@@ -323,4 +302,3 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
 </body>
 </html>
-
