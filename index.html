@@ -390,37 +390,41 @@ form#registrationForm button:hover {
 </footer>
 
 <script>
-document.getElementById("registrationForm").addEventListener("submit", function(e) {
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+
   e.preventDefault();
 
-  const form = e.target;
+  const form = document.getElementById("registrationForm");
   const message = document.getElementById("responseMessage");
   const button = form.querySelector("button");
 
-  message.textContent = "Submitting registration...";
   button.disabled = true;
+  message.textContent = "Submitting registration...";
 
   const formData = new FormData(form);
 
-  formData.append("timestamp", new Date().toISOString());
-
-  fetch("https://script.google.com/macros/s/AKfycbxDI5VQcOJYM3ZtEYLrfH-cm7_hs7uyTzwn5jchvxzG9TwWDFhxilMI1wyXB7GQlonw/exec", {
-    method: "POST",
-    body: formData
+  fetch("https://script.google.com/macros/s/AKfycbxDI5VQcOJYM3ZtEYLrfH-cm7_hs7uyTzwn5jchvxzG9TwWDFhxilMI1wyXB7GQlonw/exec",{
+      method:"POST",
+      body:formData
   })
-  .then(response => response.text())
-  .then(() => {
+  .then(res => res.json())
+  .then(data => {
 
-    message.textContent = "Registration successful. Thank you for registering.";
-    form.reset();
-    button.disabled = false;
+      if(data.result === "success"){
+          message.textContent = "Registration successful. Thank you.";
+          form.reset();
+      } else {
+          message.textContent = "Submission failed. Try again.";
+      }
+
+      button.disabled = false;
 
   })
-  .catch(error => {
+  .catch(err => {
 
-    message.textContent = "Submission failed. Try again.";
-    console.error(error);
-    button.disabled = false;
+      console.error(err);
+      message.textContent = "Network error. Try again.";
+      button.disabled = false;
 
   });
 
@@ -429,6 +433,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
 
 </body>
 </html>
+
 
 
 
