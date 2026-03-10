@@ -7,12 +7,11 @@
 <title>Cybersecurity Awareness Week 2026</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
 
 <!-- Favicon -->
 <link rel="icon" href="assets/favicon.ico">
 
-<!-- CSS -->
 <style>
 * {
   margin: 0;
@@ -24,6 +23,43 @@
 body {
   background: #f4f6f8;
   color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(255,255,255,0.95);
+  color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header.header .logo {
+  width: 120px;
+}
+
+header.header .cta-btn {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header.header .cta-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Hero Section */
@@ -36,6 +72,8 @@ section.hero {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 0 30px;
+  z-index: 1;
 }
 
 .hero-overlay {
@@ -50,13 +88,20 @@ section.hero {
 
 .hero-content {
   position: relative;
-  z-index: 10; /* in front of overlay */
-  color: #fff;
+  z-index: 10;
   animation: fadeInUp 1s ease-out forwards;
+  color: #fff;
 }
 
 .hero-content h1 {
-  font-size: 2.8em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2em;
   margin-bottom: 15px;
 }
 
@@ -74,8 +119,8 @@ section.hero {
 /* Form Section */
 section.form-container {
   max-width: 650px;
-  margin: 50px auto;
-  padding: 25px;
+  margin: 120px auto 50px auto;
+  padding: 30px 25px;
   border-radius: 15px;
   background: #fff;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -84,6 +129,7 @@ section.form-container {
 section.form-container h2 {
   text-align: center;
   margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
   color: #0073e6;
 }
 
@@ -113,8 +159,6 @@ form#registrationForm button {
   cursor: pointer;
   font-weight: bold;
   border-radius: 8px;
-  padding: 12px;
-  transition: 0.3s;
 }
 
 form#registrationForm button:hover {
@@ -123,26 +167,45 @@ form#registrationForm button:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
+/* About Section */
+section.about {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+section.about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+
+section.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  text-align: justify;
+}
+
 /* Footer */
 footer {
   text-align: center;
   padding: 25px;
   background-color: #1a1a1a;
   color: #fff;
+  margin-top: 40px;
   font-size: 0.9em;
   opacity: 0.9;
-}
-
-/* About Page Link */
-.about-link {
-  color: #ff9900;
-  text-decoration: underline;
-  cursor: pointer;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .hero-content h1 { font-size: 2em; }
+  .hero-content h2 { font-size: 1.5em; }
   .hero-content p { font-size: 1.1em; }
 }
 </style>
@@ -150,16 +213,17 @@ footer {
 
 <body>
 
+<header class="header">
+  <img src="assets/logo.png" class="logo" alt="Cybersecurity Awareness Week Logo">
+  <a href="#form-section" class="cta-btn">Register Now</a>
+</header>
+
 <section class="hero">
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <!-- Keep header exactly as it is -->
-    <header class="header">
-      <img src="assets/logo.png" class="logo" alt="Cybersecurity Awareness Week Logo">
-      <h1>Cybersecurity Awareness Week 2026</h1>
-      <p>Organized by Exelsor Projects Limited</p>
-    </header>
-    <p>Join Cybersecurity Awareness Week 2026. Limited seats available.</p>
+    <h1>Cybersecurity Awareness Week 2026</h1>
+    <h2>Protect Your Digital Life</h2>
+    <p>Join Cybersecurity Awareness Week. Limited seats available.</p>
   </div>
 </section>
 
@@ -234,7 +298,15 @@ footer {
     <button type="submit">Submit Registration</button>
   </form>
   <p id="responseMessage"></p>
-  <p>Learn more about <span class="about-link" onclick="window.location.href='about.html'">Exelsor Projects Ltd.</span></p>
+</section>
+
+<section class="about">
+  <h2>About Exelsor Projects Ltd.</h2>
+  <p>
+    Exelsor Projects Limited is committed to promoting digital safety and cybersecurity awareness across Nigeria. 
+    We organize workshops, seminars, and awareness campaigns to educate individuals and businesses on best practices for protecting their online presence.
+    Our mission is to empower citizens with the knowledge and tools to stay safe in the digital world.
+  </p>
 </section>
 
 <footer>
