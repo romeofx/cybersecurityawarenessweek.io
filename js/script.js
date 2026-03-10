@@ -1,24 +1,53 @@
-const form = document.getElementById("registrationForm")
-const message = document.getElementById("responseMessage")
+document.getElementById("registrationForm").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-form.addEventListener("submit", function(e){
+  const form = e.target;
+  const message = document.getElementById("responseMessage");
+  const button = form.querySelector("button");
 
-e.preventDefault()
+  message.textContent = "Submitting registration...";
+  button.disabled = true;
 
-fetch(form.action, {
-method: "POST",
-body: new FormData(form)
-})
-.then(response => {
+  const data = {
+    timestamp: new Date().toISOString(),
+    fullname: form.fullname.value.trim(),
+    email: form.email.value.trim(),
+    phone: form.phone.value.trim(),
+    gender: form.gender.value,
+    age: form.age.value,
+    role: form.role.value,
+    organization: form.organization.value.trim(),
+    training: form.training.value,
+    concern: form.concern.value,
+    linkSafety: form.linkSafety.value,
+    scamVictim: form.scamVictim.value,
+    source: form.source.value,
+    consent: form.consent.value
+  };
 
-message.innerHTML = "Registration submitted successfully."
-form.reset()
+  fetch("https://script.google.com/macros/s/AKfycbyX8_ltlP_Kjkoeu_FR9UCmpmlbrexYdugBXNsKi39Um4a--MMhJESozDjVmnhRYTc/exec", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+  .then(response => response.json())
+  .then(result => {
 
-})
-.catch(error => {
+    if (result.status === "success") {
+      message.textContent = "Registration successful. Thank you for joining Cybersecurity Awareness Week.";
+      form.reset();
+    } else {
+      message.textContent = "Submission failed. Please try again.";
+    }
 
-message.innerHTML = "Submission failed. Try again."
+    button.disabled = false;
 
-})
-
-})
+  })
+  .catch(error => {
+    message.textContent = "Network error. Check connection and try again.";
+    console.error(error);
+    button.disabled = false;
+  });
+});
