@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Exelsor Projects Ltd.</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/favicon.ico">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: rgba(255,255,255,0.95);
+  color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header.header .logo {
+  width: 120px;
+}
+
+header.header .cta-btn {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header.header .cta-btn:hover {
+  background-color: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Hero Section */
+section.hero {
+  position: relative;
+  background: url('assets/cybersecurity-bg.jpg') no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 30px;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  color: #fff;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+}
+
+/* About Section */
+section.about-container {
+  max-width: 900px;
+  margin: 120px auto 50px auto;
+  padding: 30px 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+section.about-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #0073e6;
+  text-align: center;
+}
+
+section.about-container p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 25px;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-top: 40px;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 1.8em; }
+  .hero-content p { font-size: 1em; }
+  section.about-container { margin: 100px 15px 50px 15px; padding: 25px; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <img src="assets/logo.png" class="logo" alt="Exelsor Projects Logo">
+  <a href="index.html" class="cta-btn">Back to Home</a>
+</header>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>About Exelsor Projects Ltd.</h1>
+    <p>Committed to promoting digital safety and cybersecurity awareness across Nigeria.</p>
+  </div>
+</section>
+
+<section class="about-container">
+  <h2>Our Mission</h2>
+  <p>Exelsor Projects Limited organizes workshops, seminars, and awareness campaigns to educate individuals and businesses on best practices for protecting their online presence.</p>
+  <p>We empower citizens with knowledge and tools to stay safe in the digital world. Our programs are designed to make cybersecurity accessible and practical for everyone, from students to business owners.</p>
+  <p>Exelsor Projects Ltd. also collaborates with schools, organizations, and government bodies to strengthen digital resilience across communities.</p>
+</section>
+
+<footer>
+  <p>© 2026 Exelsor Projects Limited</p>
+</footer>
+
+</body>
+</html>
