@@ -400,53 +400,36 @@ document.getElementById("registrationForm").addEventListener("submit", function(
   message.textContent = "Submitting registration...";
   button.disabled = true;
 
-  const data = {
-    timestamp: new Date().toISOString(),
-    fullname: form.fullname.value.trim(),
-    email: form.email.value.trim(),
-    phone: form.phone.value.trim(),
-    gender: form.gender.value,
-    age: form.age.value,
-    role: form.role.value,
-    organization: form.organization.value.trim(),
-    training: form.training.value,
-    concern: form.concern.value,
-    linkSafety: form.linkSafety.value,
-    scamVictim: form.scamVictim.value,
-    source: form.source.value,
-    consent: form.consent.value
-  };
+  const formData = new FormData(form);
 
-  fetch("https://script.google.com/macros/s/AKfycbyX8_ltlP_Kjkoeu_FR9UCmpmlbrexYdugBXNsKi39Um4a--MMhJESozDjVmnhRYTc/exec", {
+  formData.append("timestamp", new Date().toISOString());
+
+  fetch("https://script.google.com/macros/s/AKfycbxDI5VQcOJYM3ZtEYLrfH-cm7_hs7uyTzwn5jchvxzG9TwWDFhxilMI1wyXB7GQlonw/exec", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
+    body: formData
   })
-  .then(response => response.json())
-  .then(result => {
+  .then(response => response.text())
+  .then(() => {
 
-    if (result.status === "success") {
-      message.textContent = "Registration successful. Thank you for joining Cybersecurity Awareness Week.";
-      form.reset();
-    } else {
-      message.textContent = "Submission failed. Please try again.";
-    }
-
+    message.textContent = "Registration successful. Thank you for registering.";
+    form.reset();
     button.disabled = false;
 
   })
   .catch(error => {
-    message.textContent = "Network error. Check connection and try again.";
+
+    message.textContent = "Submission failed. Try again.";
     console.error(error);
     button.disabled = false;
+
   });
+
 });
 </script>
 
 </body>
 </html>
+
 
 
 
