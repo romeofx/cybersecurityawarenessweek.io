@@ -2,143 +2,219 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Cybersecurity Awareness Week 2026</title>
 
-<link rel="stylesheet" href="css/style.css">
+<!-- Favicon -->
 <link rel="icon" href="assets/favicon.ico">
 
+<!-- CSS -->
+<style>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+header.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+header.header .logo {
+  width: 120px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* Hero Section */
+section.hero {
+  background-color: #0073e6;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+section.hero h2 {
+  margin-bottom: 15px;
+  font-size: 2em;
+}
+
+section.hero p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+section.hero .btn {
+  padding: 12px 25px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Form Section */
+section.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+section.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form#registrationForm input,
+form#registrationForm select,
+form#registrationForm button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+form#registrationForm button {
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form#registrationForm button:hover {
+  background-color: #005bb5;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-top: 40px;
+}
+</style>
 </head>
 
 <body>
 
 <header class="header">
-
-<img src="assets/logo.png" class="logo">
-
-<h1>Cybersecurity Awareness Week 2026</h1>
-
-<p>Organized by Exelsor Projects Limited</p>
-
+  <img src="assets/logo.png" class="logo" alt="Cybersecurity Awareness Week Logo">
+  <h1>Cybersecurity Awareness Week 2026</h1>
+  <p>Organized by Exelsor Projects Limited</p>
 </header>
 
-
 <section class="hero">
-
-<h2>Protect Your Digital Life</h2>
-
-<p>Register for Cybersecurity Awareness Week. Limited seats available.</p>
-
-<a href="#form-section" class="btn">Register Now</a>
-
+  <h2>Protect Your Digital Life</h2>
+  <p>Register for Cybersecurity Awareness Week. Limited seats available.</p>
+  <a href="#form-section" class="btn">Register Now</a>
 </section>
-
 
 <section id="form-section" class="form-container">
+  <h2>Event Registration</h2>
+  <form id="registrationForm">
+    <input type="text" name="fullname" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="tel" name="phone" placeholder="Phone Number" required>
 
-<h2>Event Registration</h2>
+    <select name="gender" required>
+      <option value="">Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Prefer not to say</option>
+    </select>
 
-<form id="registrationForm">
+    <select name="age">
+      <option value="">Age Range</option>
+      <option>Under 15</option>
+      <option>15–20</option>
+      <option>21–30</option>
+      <option>31–40</option>
+      <option>41 and above</option>
+    </select>
 
-<input type="text" name="fullname" placeholder="Full Name" required>
+    <select name="role">
+      <option value="">Are you a</option>
+      <option>Student</option>
+      <option>Business Owner</option>
+      <option>Teacher</option>
+      <option>Employee</option>
+      <option>Entrepreneur</option>
+      <option>Other</option>
+    </select>
 
-<input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="organization" placeholder="School or Organization" required>
 
-<input type="tel" name="phone" placeholder="Phone Number" required>
+    <select name="training">
+      <option value="">Cybersecurity training before</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
 
-<select name="gender" required>
-<option value="">Gender</option>
-<option>Male</option>
-<option>Female</option>
-<option>Prefer not to say</option>
-</select>
+    <select name="concern">
+      <option value="">Main online security concern</option>
+      <option>Hacked social media accounts</option>
+      <option>Online scams</option>
+      <option>Phishing emails</option>
+      <option>Fraudulent links</option>
+      <option>Data theft</option>
+      <option>Business security</option>
+      <option>Other</option>
+    </select>
 
-<select name="age">
-<option value="">Age Range</option>
-<option>Under 15</option>
-<option>15–20</option>
-<option>21–30</option>
-<option>31–40</option>
-<option>41 and above</option>
-</select>
+    <select name="linkSafety">
+      <option value="">Check shortened link safety</option>
+      <option>Yes</option>
+      <option>No</option>
+      <option>Not sure</option>
+    </select>
 
-<select name="role">
-<option value="">Are you a</option>
-<option>Student</option>
-<option>Business Owner</option>
-<option>Teacher</option>
-<option>Employee</option>
-<option>Entrepreneur</option>
-<option>Other</option>
-</select>
+    <select name="scamVictim">
+      <option value="">Victim of online scam</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
 
-<input type="text" name="organization" placeholder="School or Organization" required>
+    <select name="source">
+      <option value="">How did you hear</option>
+      <option>Facebook</option>
+      <option>WhatsApp</option>
+      <option>Friend</option>
+      <option>Other</option>
+    </select>
 
-<select name="training">
-<option value="">Cybersecurity training before</option>
-<option>Yes</option>
-<option>No</option>
-</select>
+    <select name="consent" required>
+      <option value="">Receive event updates</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
 
-<select name="concern">
-<option value="">Main online security concern</option>
-<option>Hacked social media accounts</option>
-<option>Online scams</option>
-<option>Phishing emails</option>
-<option>Fraudulent links</option>
-<option>Data theft</option>
-<option>Business security</option>
-<option>Other</option>
-</select>
-
-<select name="linkSafety">
-<option value="">Check shortened link safety</option>
-<option>Yes</option>
-<option>No</option>
-<option>Not sure</option>
-</select>
-
-<select name="scamVictim">
-<option value="">Victim of online scam</option>
-<option>Yes</option>
-<option>No</option>
-</select>
-
-<select name="source">
-<option value="">How did you hear</option>
-<option>Facebook</option>
-<option>WhatsApp</option>
-<option>Friend</option>
-<option>Other</option>
-</select>
-
-<select name="consent" required>
-<option value="">Receive event updates</option>
-<option>Yes</option>
-<option>No</option>
-</select>
-
-<button type="submit">Submit Registration</button>
-
-</form>
-
-<p id="responseMessage"></p>
-
+    <button type="submit">Submit Registration</button>
+  </form>
+  <p id="responseMessage"></p>
 </section>
 
-
 <footer>
-
-<p>© 2026 Exelsor Projects Limited</p>
-
+  <p>© 2026 Exelsor Projects Limited</p>
 </footer>
 
-<script src="js/script.js"></script>
+<!-- JS -->
+<script>
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  document.getElementById('responseMessage').textContent = "Thank you! Your registration has been submitted.";
+  this.reset();
+});
+</script>
 
 </body>
-
 </html>
-
