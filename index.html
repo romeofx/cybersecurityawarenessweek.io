@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Cybersecurity Awareness Week 2026</title>
 
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
 <!-- Favicon -->
 <link rel="icon" href="assets/favicon.ico">
 
@@ -16,14 +19,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Header */
 header.header {
   text-align: center;
-  padding: 20px;
-  background-color: #1a1a1a;
+  padding: 30px 20px;
+  background: linear-gradient(90deg, #ff0000, #0000ff);
   color: #fff;
 }
 
@@ -31,46 +41,71 @@ header.header .logo {
   width: 120px;
   display: block;
   margin: 0 auto 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 5px;
+}
+
+header.header p {
+  font-size: 1em;
+  opacity: 0.9;
 }
 
 /* Hero Section */
 section.hero {
-  background-color: #0073e6;
+  background: linear-gradient(135deg, #0073e6, #00cfff);
   color: #fff;
   text-align: center;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 section.hero h2 {
   margin-bottom: 15px;
-  font-size: 2em;
+  font-size: 2.5em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 section.hero p {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   font-size: 1.2em;
 }
 
 section.hero .btn {
-  padding: 12px 25px;
+  padding: 15px 30px;
   background-color: #ff9900;
   color: #fff;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+section.hero .btn:hover {
+  background-color: #e68a00;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Form Section */
 section.form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 30px 25px;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 section.form-container h2 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  font-family: 'Montserrat', sans-serif;
+  color: #0073e6;
 }
 
 form#registrationForm input,
@@ -78,8 +113,18 @@ form#registrationForm select,
 form#registrationForm button {
   width: 100%;
   margin-bottom: 15px;
-  padding: 10px;
+  padding: 12px 15px;
   font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+form#registrationForm input:focus,
+form#registrationForm select:focus {
+  border-color: #0073e6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,115,230,0.5);
 }
 
 form#registrationForm button {
@@ -87,20 +132,24 @@ form#registrationForm button {
   color: #fff;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  font-weight: bold;
 }
 
 form#registrationForm button:hover {
   background-color: #005bb5;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #1a1a1a;
   color: #fff;
   margin-top: 40px;
+  font-size: 0.9em;
+  opacity: 0.9;
 }
 </style>
 </head>
