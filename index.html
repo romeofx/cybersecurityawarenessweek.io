@@ -108,7 +108,7 @@ font-size:1.2rem;
 margin-bottom:20px;
 }
 
-/* YELLOW CTA */
+/* CTA */
 
 .about-btn{
 display:inline-block;
@@ -126,7 +126,7 @@ background:#e6b800;
 transform:translateY(-2px);
 }
 
-/* FORM CONTAINER */
+/* FORM */
 
 .form-container{
 max-width:700px;
@@ -143,8 +143,6 @@ margin-bottom:25px;
 font-family:'Montserrat',sans-serif;
 color:#0073e6;
 }
-
-/* INPUTS */
 
 form input,
 form select{
@@ -182,13 +180,58 @@ form button:hover{
 background:linear-gradient(90deg,#005bb5,#0080d1);
 }
 
-/* RESPONSE */
+/* SPINNER */
+
+.spinner{
+display:inline-block;
+width:18px;
+height:18px;
+border:3px solid #ccc;
+border-top:3px solid #0073e6;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-right:8px;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* RESPONSE MESSAGE */
 
 #responseMessage{
 margin-top:15px;
-font-weight:bold;
 text-align:center;
-color:#0073e6;
+}
+
+/* SUCCESS */
+
+.success-box{
+background:#e8f7ee;
+border:1px solid #34a853;
+padding:18px;
+border-radius:12px;
+color:#1b5e20;
+font-weight:600;
+animation:fadeIn .4s ease;
+}
+
+/* ERROR */
+
+.error-box{
+background:#fdecea;
+border:1px solid #ea4335;
+padding:18px;
+border-radius:12px;
+color:#7f1d1d;
+font-weight:600;
+animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+0%{opacity:0;transform:translateY(8px);}
+100%{opacity:1;transform:translateY(0);}
 }
 
 /* FOOTER */
@@ -236,13 +279,8 @@ transform:translateY(-3px);
 
 @media(max-width:768px){
 
-.hero-content h1{
-font-size:2rem;
-}
-
-.hero-content h2{
-font-size:1.5rem;
-}
+.hero-content h1{font-size:2rem;}
+.hero-content h2{font-size:1.5rem;}
 
 .form-container{
 margin:40px 15px;
@@ -257,13 +295,9 @@ padding:30px 20px;
 <body>
 
 <header class="header">
-
 <img src="assets/logo.png" class="logo" alt="Cybersecurity Awareness Week Logo">
-
 <a href="#form-section" class="cta-btn">Register Now</a>
-
 </header>
-
 
 <section class="hero">
 
@@ -272,7 +306,6 @@ padding:30px 20px;
 <div class="hero-content">
 
 <h1>Cybersecurity Awareness Week 2026</h1>
-
 <h2>Protect Your Digital Life</h2>
 
 <p>Join Cybersecurity Awareness Week. Limited seats available.</p>
@@ -283,7 +316,6 @@ padding:30px 20px;
 
 </section>
 
-
 <section id="form-section" class="form-container">
 
 <h2>Event Registration</h2>
@@ -291,9 +323,7 @@ padding:30px 20px;
 <form id="registrationForm">
 
 <input type="text" name="fullname" placeholder="Full Name" required>
-
 <input type="email" name="email" placeholder="Email Address" required>
-
 <input type="tel" name="phone" placeholder="Phone Number" required>
 
 <select name="gender" required>
@@ -376,7 +406,6 @@ padding:30px 20px;
 
 </section>
 
-
 <footer>
 
 <div class="footer-inner">
@@ -384,21 +413,15 @@ padding:30px 20px;
 <p>© 2026 Exelsor Projects Limited</p>
 
 <div class="social-links">
-
 <a href="#"><i class="fab fa-facebook-f"></i></a>
-
 <a href="#"><i class="fab fa-tiktok"></i></a>
-
 <a href="#"><i class="fab fa-linkedin-in"></i></a>
-
 <a href="#"><i class="fab fa-x-twitter"></i></a>
-
 </div>
 
 </div>
 
 </footer>
-
 
 <script>
 
@@ -411,7 +434,9 @@ const message=document.getElementById("responseMessage")
 const button=form.querySelector("button")
 
 button.disabled=true
-message.textContent="Submitting registration..."
+button.innerHTML='<span class="spinner"></span>Submitting...'
+
+message.innerHTML='<span class="spinner"></span> Sending your registration...'
 
 const formData=new FormData(form)
 
@@ -426,23 +451,27 @@ body:formData
 
 if(data.result==="success"){
 
-message.textContent="Registration successful. Thank you."
+message.innerHTML='<div class="success-box">🎉 Registration successful. Thank you for joining Cybersecurity Awareness Week 2026.</div>'
+
 form.reset()
 
 }else{
 
-message.textContent="Submission failed. Try again."
+message.innerHTML='<div class="error-box">⚠️ Submission failed. Please try again.</div>'
 
 }
 
 button.disabled=false
+button.textContent="Submit Registration"
 
 })
 
 .catch(()=>{
 
-message.textContent="Network error. Try again."
+message.innerHTML='<div class="error-box">🌐 Network error. Check connection and try again.</div>'
+
 button.disabled=false
+button.textContent="Submit Registration"
 
 })
 
