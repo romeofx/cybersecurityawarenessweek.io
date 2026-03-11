@@ -4,151 +4,152 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About Exelsor Projects Ltd.</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Favicon -->
 <link rel="icon" href="assets/favicon.ico">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Roboto',sans-serif;
 }
 
-body {
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+body{
+background:#f4f6f8;
+color:#333;
+line-height:1.6;
 }
 
-/* Header */
-header.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: rgba(255,255,255,0.95);
-  color: #333;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+/* HEADER */
+
+header.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(255,255,255,0.95);
+position:fixed;
+width:100%;
+top:0;
+z-index:999;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
 
-header.header .logo {
-  width: 120px;
+.logo{
+width:120px;
 }
 
-header.header .cta-btn {
-  padding: 10px 20px;
-  background-color: #0073e6;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: 0.3s;
+.cta-btn{
+padding:10px 20px;
+background:#0073e6;
+color:#fff;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+transition:.3s;
 }
 
-header.header .cta-btn:hover {
-  background-color: #005bb5;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.cta-btn:hover{
+background:#005bb5;
 }
 
-/* Hero Section */
-section.hero {
-  position: relative;
-  background: url('assets/cybersecurity-bg.jpg') no-repeat center center/cover;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 30px;
-  z-index: 1;
+/* HERO */
+
+.hero{
+position:relative;
+background:url('assets/cybersecurity-bg.jpg') center/cover no-repeat;
+height:50vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:0 20px;
+margin-top:70px;
 }
 
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.55);
-  z-index: 1;
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
 }
 
-.hero-content {
-  position: relative;
-  z-index: 10;
-  color: #fff;
-  animation: fadeInUp 1s ease-out forwards;
+.hero-content{
+position:relative;
+color:#fff;
+max-width:700px;
 }
 
-.hero-content h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5em;
-  margin-bottom: 10px;
+.hero-content h1{
+font-family:'Montserrat',sans-serif;
+font-size:2.4rem;
+margin-bottom:10px;
 }
 
-.hero-content p {
-  font-size: 1.2em;
+.hero-content p{
+font-size:1.1rem;
 }
 
-/* About Section */
-section.about-container {
-  max-width: 900px;
-  margin: 120px auto 50px auto;
-  padding: 30px 25px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+/* CONTENT SECTIONS */
+
+.container{
+max-width:950px;
+margin:40px auto;
+padding:30px;
+background:#fff;
+border-radius:12px;
+box-shadow:0 6px 18px rgba(0,0,0,0.08);
 }
 
-section.about-container h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #0073e6;
-  text-align: center;
+.container h2{
+font-family:'Montserrat',sans-serif;
+font-size:1.9rem;
+margin-bottom:15px;
+color:#0073e6;
+text-align:center;
 }
 
-section.about-container p {
-  font-size: 1.1em;
-  margin-bottom: 15px;
-  text-align: justify;
-  line-height: 1.8;
+.container p{
+margin-bottom:15px;
+font-size:1.05rem;
+text-align:justify;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 25px;
-  background-color: #1a1a1a;
-  color: #fff;
-  margin-top: 40px;
-  font-size: 0.9em;
-  opacity: 0.9;
+/* FOOTER */
+
+footer{
+background:#1a1a1a;
+color:#fff;
+margin-top:40px;
 }
- .social-links{
+
+.footer-inner{
+max-width:1000px;
+margin:auto;
+padding:30px 20px;
+text-align:center;
+}
+
+.social-links{
 margin-top:15px;
 display:flex;
 justify-content:center;
-gap:20px;
+gap:18px;
 }
 
 .social-links a{
-width:40px;
-height:40px;
+width:42px;
+height:42px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -157,7 +158,7 @@ background:#333;
 color:#fff;
 font-size:18px;
 text-decoration:none;
-transition:0.3s;
+transition:.3s;
 }
 
 .social-links a:hover{
@@ -165,38 +166,52 @@ background:#0073e6;
 transform:translateY(-3px);
 }
 
+/* MOBILE */
 
-/* Animation */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:1.8rem;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-content h1 { font-size: 1.8em; }
-  .hero-content p { font-size: 1em; }
-  section.about-container { margin: 100px 15px 50px 15px; padding: 25px; }
+.container{
+margin:25px 15px;
+padding:22px;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
+
 <header class="header">
-  <img src="assets/logo.png" class="logo" alt="Exelsor Projects Logo">
-  <a href="index.html" class="cta-btn">Back to Home</a>
+
+<img src="assets/logo.png" class="logo" alt="Exelsor Projects Logo">
+
+<a href="index.html" class="cta-btn">Back to Home</a>
+
 </header>
 
+
 <section class="hero">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h1>About Exelsor Projects Ltd.</h1>
-    <p>Committed to promoting digital safety and cybersecurity awareness across Nigeria.</p>
-  </div>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<h1>About Exelsor Projects Ltd.</h1>
+
+<p>Committed to promoting digital safety and cybersecurity awareness across Nigeria.</p>
+
+</div>
+
 </section>
 
-<section class="about-container">
+
+<section class="container">
 
 <h2>Our Work and Impact</h2>
 
@@ -213,88 +228,101 @@ Exelsor Projects Limited organizes workshops, seminars, and awareness campaigns 
 </p>
 
 <p>
-The organization also partners with schools, corporate institutions, and public sector agencies to promote digital literacy, strengthen cybersecurity awareness, and support the responsible use of technology across communities.
-</p>
-
-<section>
-
-<h2>Who We Are</h2> 
-
-<p>
-Exelsor Projects Limited operates as an Information and Communication Technology service provider. The company focuses on helping organizations adopt modern technology tools which improve operational efficiency and support strategic growth.
-</p>
-
-<p>
-Founded in February 2018 and registered with the Corporate Affairs Commission in June 2019, Exelsor maintains its headquarters in Abakaliki, Nigeria. The company also operates an international branch in Swindon, United Kingdom with supporting staff across both locations.
-</p>
-
-<p>
-Exelsor delivers services across several sectors including government, security, education, healthcare, business, hospitality, sports, and social organizations. The firm supports both individuals and institutions seeking practical technology solutions.
-</p>
-
-<section>
-
-<h2>What We Do</h2>
-
-<p>
-Exelsor applies technology solutions which align business goals with digital systems. The organization helps institutions modernize their operations through automation, application development, and infrastructure optimization.
-</p>
-
-<p>
-Services include business process automation, software application development, IT advisory, desktop virtualization, and digital transformation support. These services help organizations reduce operational cost, improve system management, and expand access to new digital markets.
-</p>
-
-<h2>Vision</h2>
-
-<p>
-To become a recognized and dependable technology partner known for delivering quality solutions, strong value, and timely services which support corporate strategy and simplify business challenges through the effective use of technology.
-</p>
-
-<h2>Mission</h2>
-
-<p>
-To provide world-class IT products, professional training, and reliable technology services that enable organizations and individuals to achieve their goals while benefiting from modern digital innovation.
-</p>
-
-<h2>Our Commitment</h2>
-
-<p>
-Exelsor Projects Limited continues to support organizations seeking to embrace modern digital tools. The company combines professional expertise, practical training, and emerging technology to deliver efficient and sustainable solutions for clients.
+The organization partners with schools, corporate institutions, and public sector agencies to promote digital literacy and strengthen cybersecurity awareness across communities.
 </p>
 
 </section>
 
+
+<section class="container">
+
+<h2>Who We Are</h2>
+
+<p>
+Exelsor Projects Limited operates as an Information and Communication Technology service provider focused on helping organizations adopt modern technology tools that improve efficiency and support strategic growth.
+</p>
+
+<p>
+Founded in February 2018 and registered with the Corporate Affairs Commission in June 2019, the company maintains its headquarters in Abakaliki, Nigeria and an international branch in Swindon, United Kingdom.
+</p>
+
+<p>
+Exelsor delivers services across government, security, education, healthcare, business, hospitality, and social sectors while supporting both institutions and individuals seeking practical technology solutions.
+</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>What We Do</h2>
+
+<p>
+Exelsor applies technology solutions that align business goals with digital systems. The organization helps institutions modernize their operations through automation, application development, and infrastructure optimization.
+</p>
+
+<p>
+Services include business process automation, software development, IT advisory, desktop virtualization, and digital transformation support which help organizations reduce operational cost and improve system management.
+</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>Vision</h2>
+
+<p>
+To become a dependable technology partner recognized for delivering quality solutions, strong value, and timely services that support corporate strategy and simplify business challenges through modern technology.
+</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>Mission</h2>
+
+<p>
+To provide world class IT products, professional training, and reliable technology services that enable organizations and individuals achieve their goals through modern digital innovation.
+</p>
+
+</section>
+
+
+<section class="container">
+
+<h2>Our Commitment</h2>
+
+<p>
+Exelsor Projects Limited continues to support organizations seeking to embrace modern digital tools by combining professional expertise, practical training, and emerging technology to deliver efficient and sustainable solutions.
+</p>
+
+</section>
+
+
 <footer>
+
+<div class="footer-inner">
 
 <p>© 2026 Exelsor Projects Limited</p>
 
 <div class="social-links">
 
-<a href="#" target="_blank" aria-label="Facebook">
-<i class="fab fa-facebook-f"></i>
-</a>
+<a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
 
-<a href="#" target="_blank" aria-label="TikTok">
-<i class="fab fa-tiktok"></i>
-</a>
+<a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
 
-<a href="#" target="_blank" aria-label="LinkedIn">
-<i class="fab fa-linkedin-in"></i>
-</a>
+<a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
 
-<a href="#" target="_blank" aria-label="X">
-<i class="fab fa-x-twitter"></i>
-</a>
+<a href="#" aria-label="X"><i class="fab fa-x-twitter"></i></a>
+
+</div>
 
 </div>
 
 </footer>
-  
+
 
 </body>
-
 </html>
-
-
-
-
